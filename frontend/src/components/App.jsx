@@ -1,20 +1,17 @@
 import React from "react";
+import Header from "./Header"
+import SearchArea from "./SearchArea";
+
 
 function App(){
     return(
-
         <div className={ "center" }>
-            <h1>Pese ma Viiga</h1>
-            <div className={ "search-bar"}>
-                <div>
-                <input type="text" placeholder="Find a Pese" spellCheck="false"/>
-                </div>
-                <div className={"btn-container"}>
-                    <button className="button">Search</button>
-                </div>
-                
-            </div>
+
+
+            <Header />
+            <SearchArea />
             
+
         </div>
         
     )

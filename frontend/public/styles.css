@@ -1,23 +1,25 @@
  
  
- html {
+ body {
     background-color: #FAF1E6;
 }
 
 h1 {
-    padding-top: 4em;
+    margin-top: 4em;
     font-family: 'Raleway', sans-serif;
+    font-weight: 800;
     font-size: 3em;
     color: #064420;
     text-align: center;
 }
 
-.search-bar{
-    text-align: center;
+
+.whole-line{
     display: block;
+    text-align: center;
 }
 
-.search-bar input {
+input {
     height: 2.5em;
     width: 50em;
     border-radius: 2em;
@@ -25,27 +27,24 @@ h1 {
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
     font-size: 1em;
-    padding-left: 2em;
+    padding-left: 2em; 
 }
 
-.btn-container{
-    padding-top: 1.5em;
-}
 .button {
     border: none;
     background-color: #064420;
     border-radius: 2em;
     width: 16em;
     height: 3em;
-    padding: rem;
     font-family: 'Raleway', sans-serif;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 1em;
     color: white;
-    
+    cursor: pointer;  
+    margin-top: 1em;
 } 
 
-.btn-inside{
-    padding-right: 0.5em;
-    padding-top: 3em;
-}
+.button:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
+  }
+
