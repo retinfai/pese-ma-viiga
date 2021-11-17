@@ -1,16 +1,11 @@
 import React from "react";
-import Header from "./Header"
-import SearchArea from "./SearchArea";
+import HomePage from "./HomePage";
 
 
 function App(){
     return(
         <div className={ "center" }>
-
-
-            <Header />
-            <SearchArea />
-            
+            <HomePage />
 
         </div>
         
