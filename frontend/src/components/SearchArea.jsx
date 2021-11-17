@@ -6,13 +6,16 @@ function SearchArea(props){
 
     return (
         <div>
-            <SearchBar 
-                placeholder="Find a Pese"
-            />
-
-            <Button 
-                name="Search"
-            />
+            <form action="/" method="post">
+                <SearchBar 
+                    placeholder="Find a Pese"
+                />
+                <Button 
+                    name="Search"
+                    type="submit"
+                />
+            </form>
+             
         </div>
        
     )

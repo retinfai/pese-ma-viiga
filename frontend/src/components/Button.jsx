@@ -4,7 +4,7 @@ function Button(props){
 
     return (
         <span className={"whole-line"}>
-            <button className={"button"}><span>{props.name}</span></button>
+            <button type={props.type} className={"button"}>{props.name}</button>
         </span>
     )
 }
