@@ -1,10 +1,10 @@
 import React from "react";
 
-function Button(props){
 
+function Button(props){
     return (
         <span className={"whole-line"}>
-            <button type={props.type} className={"button"}>{props.name}</button>
+            <button onClick= {props.onClick} type={props.type} className={"button"}>{props.name}</button>
         </span>
     )
 }
