@@ -10,6 +10,7 @@ function SearchBar(props){
     
     return (
         <span className={"whole-line"}>
+        
             <input 
                 id={props.id}
                 name={props.name} 

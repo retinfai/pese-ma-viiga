@@ -23,8 +23,8 @@ h1 {
 input {
     height: 2.5em;
     width: 50em;
-    border-radius: 2em;
-    border-color: #064420;
+    border-radius: 3em;
+    border: solid #bfd9c6;
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
     font-size: 1em;

@@ -3,21 +3,17 @@ import SearchBar from "./SearchBar";
 import Button from "./Button";
 
 
-
-
 function SearchArea(props){
     
-    // http://localhost:2000/search
     function getSearchResults(props){
         
         const userInput = {searchInput: document.getElementById("search-bar").value}
-
         console.log(userInput);
         
         const options = {
             mode: 'cors',
-            method: 'POST', // *GET, POST, PUT, DELETE, etc.
-            body: JSON.stringify(userInput), // body data type must match "Content-Type" header
+            method: 'POST', 
+            body: JSON.stringify(userInput), 
             headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
@@ -32,7 +28,6 @@ function SearchArea(props){
             .catch((error) => {
             console.error('Error:', error);
             });
-       
 
     }
 
@@ -40,7 +35,7 @@ function SearchArea(props){
         <div>
             <iframe title="dummyframe" name="dummyframe" id="dummyframe"></iframe>
 
-            <form action=""onSubmit={getSearchResults} target="dummyframe" autoComplete="off"> 
+            <form onSubmit={getSearchResults} target="dummyframe" autoComplete="off"> 
                 <SearchBar 
                     name="searchBar"
                     placeholder="Find a Pese"
@@ -52,7 +47,6 @@ function SearchArea(props){
                 />
             </form>
            
-            
         </div>
        
     )
