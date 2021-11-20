@@ -23,19 +23,16 @@ function SearchArea(props){
         fetch("http://localhost:2000/search", options)
             .then(response => response.json())
             .then(data => {
-            console.log('Success:', data);
+                console.log('Success:', data);
             })
             .catch((error) => {
-            console.error('Error:', error);
+                console.error('Error:', error);
             });
 
     }
 
     return (
         <div>
-            <iframe title="dummyframe" name="dummyframe" id="dummyframe"></iframe>
-
-            {/* <form onSubmit={getSearchResults} target="dummyframe" autoComplete="off">  */}
                 <SearchBar 
                     name="searchBar"
                     placeholder="Find a Pese"
@@ -47,8 +44,6 @@ function SearchArea(props){
                         type="submit"
                     />
                 </NavLink>
-            {/* </form> */}
-           
         </div>
        
     )
