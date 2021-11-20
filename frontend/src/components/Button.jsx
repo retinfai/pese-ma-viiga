@@ -3,7 +3,7 @@ import React from "react";
 
 function Button(props){
     return (
-        <span className={"whole-line"}>
+        <span className={props.styling}>
             <button 
                 name = {props.name}
                 onClick= {props.onClick} 

@@ -9,10 +9,10 @@ function SearchBar(props){
     }
     
     return (
-        <span className={"whole-line"}>
+        <span className={props.styling}>
         
             <input 
-                id={props.id}
+                id="search-bar"
                 name={props.name} 
                 type="text" 
                 placeholder={props.placeholder} 

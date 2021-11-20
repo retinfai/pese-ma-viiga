@@ -8,8 +8,8 @@ function SearchArea(props){
     const navigate = useNavigate();
 
     function getSearchResults(props){
-
-        const userInput = {searchInput: document.getElementById("search-bar").value}
+        const rawInput = document.getElementById("search-bar").value
+        const userInput = {searchInput: rawInput}
         console.log(userInput);
         
         const options = {
@@ -31,32 +31,27 @@ function SearchArea(props){
                 console.error('Error:', error);
             });
 
-            navigate('/search',{state:{id:1,name:'sabaoon'}});
+            navigate('/search',{state:{searchQuery: rawInput}});
 
     }
 
    
-   
-
-
     return (
         <div>
                 <SearchBar 
-                    name="searchBar"
-                    placeholder="Find a Pese"
-                    id="search-bar"
-                />
-                {/* <NavLink to={{
-                    pathname: '/search',
-                    state: {id: 1, name: 'sabaoon', shirt: 'green'}
-                    }} 
-                    onClick={getSearchResults}> */}
+                    name={props.barName}
+                    placeholder={props.barPlaceHolder}
+                    styling={props.barStyling}
+                    value={props.barValue}
 
-                    <Button 
-                        label="Search"
-                        onClick={getSearchResults}
-                    />
-                {/* </NavLink> */}
+                />
+             
+                <Button 
+                    label={props.btnLabel}
+                    onClick={getSearchResults}
+                    styling={props.btnStyling}
+                />
+
         </div>
        
     )

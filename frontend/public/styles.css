@@ -8,18 +8,23 @@ h1 {
     font-weight: 800;
     font-size: 3em;
     color: #064420;
+    /* margin-bottom: 0; */
 }
 
 .whole-line{
     display: block;
+    margin-top: 2em;
 }
+
 
 .center{
     text-align: center;
-    margin-top: 15em;
 }
 
-
+.absolute-center{
+    text-align: center;
+    margin-top: 15em;
+}
 input {
     height: 2.5em;
     width: 50em;
@@ -42,7 +47,7 @@ input {
     font-size: 1em;
     color: white;
     cursor: pointer;  
-    margin-top: 1em;
+    margin-top: 0;
 } 
 
 .button:hover {
@@ -52,3 +57,4 @@ input {
 #dummyframe {
     display: none;
 }
+

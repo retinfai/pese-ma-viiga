@@ -7,9 +7,15 @@ import SearchArea from "../SearchArea";
 
 function HomePage(){
     return(
-        <div className={ "center" }>
+        <div className={ "absolute-center" }>
             <Header />
-            <SearchArea />
+            <SearchArea 
+                barName="searchBar"
+                barStyling="whole-line"
+                btnLabel="Search"
+                btnStyling={"whole-line"}
+                barPlaceHolder="Find a Pese"
+            />
         </div>
     )
 
