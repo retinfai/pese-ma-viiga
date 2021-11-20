@@ -1,12 +1,14 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import Button from "./Button";
-import { NavLink } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 function SearchArea(props){
     
+    const navigate = useNavigate();
+
     function getSearchResults(props){
-        
+
         const userInput = {searchInput: document.getElementById("search-bar").value}
         console.log(userInput);
         
@@ -29,7 +31,13 @@ function SearchArea(props){
                 console.error('Error:', error);
             });
 
+            navigate('/search',{state:{id:1,name:'sabaoon'}});
+
     }
+
+   
+   
+
 
     return (
         <div>
@@ -38,12 +46,17 @@ function SearchArea(props){
                     placeholder="Find a Pese"
                     id="search-bar"
                 />
-                <NavLink to="/search" onClick={getSearchResults}>
+                {/* <NavLink to={{
+                    pathname: '/search',
+                    state: {id: 1, name: 'sabaoon', shirt: 'green'}
+                    }} 
+                    onClick={getSearchResults}> */}
+
                     <Button 
                         label="Search"
-                        type="submit"
+                        onClick={getSearchResults}
                     />
-                </NavLink>
+                {/* </NavLink> */}
         </div>
        
     )

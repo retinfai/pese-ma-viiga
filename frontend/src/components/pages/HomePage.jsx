@@ -3,8 +3,9 @@ import Header from "../Header";
 import SearchArea from "../SearchArea";
 
 
-function HomePage(){
 
+
+function HomePage(){
     return(
         <div className={ "center" }>
             <Header />
