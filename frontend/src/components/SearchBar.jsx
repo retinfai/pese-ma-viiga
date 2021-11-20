@@ -17,7 +17,7 @@ function SearchBar(props){
                 type="text" 
                 placeholder={props.placeholder} 
                 spellCheck="false"
-                value={userInput}
+                value={props.barValue !== "" ? userInput : props.barValue}
                 onChange={onChange}
                 autoComplete="off"
                 />

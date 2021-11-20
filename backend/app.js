@@ -29,7 +29,7 @@ const peseSchema = new mongoose.Schema({
 const peseModel = new mongoose.model("Pese", peseSchema);
 
 function getFromDB(searchQuery){
-  const results = peseModel.find({$text: {$search: searchQuery}}).exec();
+  const results = peseModel.find({$text: {$search: `\"${searchQuery}\"`}}).exec();
   return results;
 }
 

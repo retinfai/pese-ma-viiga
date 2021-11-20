@@ -10,7 +10,7 @@ function SearchArea(props){
     function getSearchResults(props){
         const rawInput = document.getElementById("search-bar").value
         const userInput = {searchInput: rawInput}
-        console.log(userInput);
+        // console.log(userInput);
         
         const options = {
             mode: 'cors',
@@ -25,13 +25,18 @@ function SearchArea(props){
         fetch("http://localhost:2000/search", options)
             .then(response => response.json())
             .then(data => {
-                console.log('Success:', data);
+                // console.log('Success:', data);
+                navigate('/search',{state:{
+                    searchQuery: rawInput,
+                    peses: data
+                }});
+                
             })
             .catch((error) => {
                 console.error('Error:', error);
             });
 
-            navigate('/search',{state:{searchQuery: rawInput}});
+            
 
     }
 
