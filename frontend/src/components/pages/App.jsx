@@ -1,13 +1,13 @@
-import React from "react";
-import HomePage from "./HomePage";
+// import React from "react";
+// import HomePage from "./HomePage";
 
 
-function App(){
-    return(
-        <HomePage />
+// function App(){
+//     return(
+//         <HomePage />
 
-    )
+//     )
 
-}
+// }
 
-export default App;
+// export default App;

@@ -1,7 +1,7 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import Button from "./Button";
-
+import { NavLink } from "react-router-dom";
 
 function SearchArea(props){
     
@@ -35,17 +35,19 @@ function SearchArea(props){
         <div>
             <iframe title="dummyframe" name="dummyframe" id="dummyframe"></iframe>
 
-            <form onSubmit={getSearchResults} target="dummyframe" autoComplete="off"> 
+            {/* <form onSubmit={getSearchResults} target="dummyframe" autoComplete="off">  */}
                 <SearchBar 
                     name="searchBar"
                     placeholder="Find a Pese"
                     id="search-bar"
                 />
-                <Button 
-                    label="Search"
-                    type="submit"
-                />
-            </form>
+                <NavLink to="/search" onClick={getSearchResults}>
+                    <Button 
+                        label="Search"
+                        type="submit"
+                    />
+                </NavLink>
+            {/* </form> */}
            
         </div>
        

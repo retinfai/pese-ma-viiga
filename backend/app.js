@@ -27,43 +27,19 @@ const peseSchema = new mongoose.Schema({
 })
 
 const peseModel = new mongoose.model("Pese", peseSchema);
-peseSchema.index({"pese": 'text'});
-
-// peseModel.find({$text: {$search: "i"}})
-// console.log(peseModel.find({$text: {$search: "sauni"}}));
-
-
-
-
-
 
 function getFromDB(searchQuery){
-  // console.log("Search Query is: " + searchQuery);
-  // // const searchResults =
-  const results = peseModel.find({$text: {$search: searchQuery}}).exec()
-
-  return results
-
-
+  const results = peseModel.find({$text: {$search: searchQuery}}).exec();
+  return results;
 }
 
-
-app.get("/", function(req,res){
-  res.send("Backend API Working");
-});
-
-
-app.get("/search", function(req,res){
-  console.log("Successfully sent form");
-  // res.render("../frontend/")
-});
+//--------------- MAIN FUNCTIONALITY
 
 app.post("/search", function(req,res){
   console.log();
   console.log("Received request:");
   console.log(req.body);
 
-  // finalSearchResults = {results: []}
     const databaseResults = getFromDB(req.body.searchInput)
       .then(function(peses){
           const finalSearchResults = {results: []}
@@ -71,8 +47,6 @@ app.post("/search", function(req,res){
           res.json(finalSearchResults)
         })
 
-
-    // console.log(finalSearchResults);
 });
 
 

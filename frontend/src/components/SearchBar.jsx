@@ -19,6 +19,7 @@ function SearchBar(props){
                 spellCheck="false"
                 value={userInput}
                 onChange={onChange}
+                autoComplete="off"
                 />
                 
         </span>
