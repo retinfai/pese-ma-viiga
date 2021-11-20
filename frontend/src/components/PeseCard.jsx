@@ -7,9 +7,11 @@ function PeseCard(props){
 
 
     return (
-        <div>
+        // <div className={"pese-card-container"}>
+            <div className={"pese-card"}>
 
-        </div>
+            </div>
+        
     )
 
 }

@@ -19,6 +19,7 @@ h1 {
 
 .center{
     text-align: center;
+    margin: auto;
 }
 
 .absolute-center{
@@ -33,7 +34,15 @@ input {
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
     font-size: 1em;
-    padding-left: 2em; 
+    padding-left: 2em;   
+}
+
+.search-container{
+    position: fixed;
+    left: 50%;
+    margin-left: -25em;
+    background-color: #FAF1E6;
+    padding-bottom: 1em;
 }
 
 .button {
@@ -55,6 +64,28 @@ input {
   }
 
 #dummyframe {
+    display: none;
+}
+/* .pese-card-container{
+    text-align: center;
+} */
+.pese-card{
+    background-color:#bfd9c6;
+    height: 15em;
+    width: 50em;
+    margin: auto;
+    margin-top: 2em;
+    border-radius: 2em;
+    
+}
+
+.results-area{
+    margin-top: 5em;
+    height: 36.5em;
+    overflow: scroll;
+}
+
+.results-area::-webkit-scrollbar{
     display: none;
 }
 

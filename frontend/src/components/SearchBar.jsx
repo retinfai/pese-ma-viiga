@@ -1,12 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 function SearchBar(props){
-
-    const [userInput, setUserInput] = useState("");
-
-    function onChange(event){
-        setUserInput(event.target.value);
-    }
     
     return (
         <span className={props.styling}>
@@ -17,8 +11,8 @@ function SearchBar(props){
                 type="text" 
                 placeholder={props.placeholder} 
                 spellCheck="false"
-                value={props.barValue !== "" ? userInput : props.barValue}
-                onChange={onChange}
+                value={props.barValue}
+                // onChange={onChange}
                 autoComplete="off"
                 />
                 

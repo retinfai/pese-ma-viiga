@@ -1,5 +1,7 @@
 import React from "react";
 import {useLocation} from 'react-router-dom';
+import PeseCard from "../PeseCard";
+import ResultsArea from "../ResultsArea";
 import SearchArea from "../SearchArea";
 
 function SearchResults(){
@@ -15,20 +17,21 @@ function SearchResults(){
 
     
     return (
-        <div className={"center"}>
-            <h1>Search Results:</h1>
+        // <div className={"center"}>
+            <div className={"search-container"}>
+                <h1>Search Results:</h1>
+                <SearchArea 
+                        btnLabel="Search"
+                        barValue={query}
+                        barPlaceHolder={query}
+                        // barValue={query}
+                        
+                    />
+                <ResultsArea/>
+            </div>
             
-            <SearchArea 
-                btnLabel="Search"
-                barValue={query}
-                barPlaceHolder={query}
-                // barValue={query}
-            />
 
-
-            
-
-        </div>
+        // </div>
      
 
     )
