@@ -86,8 +86,13 @@ input {
     height: 36.5em;
     width: 50em;
     overflow: scroll;
+    /* text-align: center; */
+}
+
+.results-area h2{
     text-align: center;
 }
+
 
 .results-area::-webkit-scrollbar{
     display: none;

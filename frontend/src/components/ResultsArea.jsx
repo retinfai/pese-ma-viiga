@@ -22,6 +22,7 @@ function ResultsArea(props){
                 return (
                     
                     <PeseCard
+                        key={"pese-" + item.number}
                         peseNum = {item.number}
                         pese = {item.pese}
                     />
