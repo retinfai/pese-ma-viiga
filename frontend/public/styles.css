@@ -11,6 +11,13 @@ h1 {
     /* margin-bottom: 0; */
 }
 
+.pese-card h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 2em;
+    color: #064420;
+}
+
 .whole-line{
     display: block;
     margin-top: 2em;
@@ -66,26 +73,77 @@ input {
 #dummyframe {
     display: none;
 }
-/* .pese-card-container{
-    text-align: center;
-} */
+
 .pese-card{
     background-color:#bfd9c6;
-    height: 15em;
+    height: 10em;
     width: 50em;
-    margin: auto;
-    margin-top: 2em;
-    border-radius: 2em;
-    
+    border-radius: 1em;
 }
 
 .results-area{
     margin-top: 5em;
     height: 36.5em;
+    width: 50em;
     overflow: scroll;
+    text-align: center;
 }
 
 .results-area::-webkit-scrollbar{
     display: none;
 }
 
+.card-header{
+    margin-left: 1.5em;
+    padding-top: 0.5em;
+}
+
+.card-top{
+    height: 4em;
+    width: 50em;
+    background-color: #bfd9c6;
+    border-top-right-radius: 1.5em;
+    border-top-left-radius: 1.5em;
+
+}
+
+.card-bottom{
+    height: 6em;
+    width: 50em;
+    background-color: #c9e7d1;
+    border-bottom-right-radius: 1.5em;
+    border-bottom-left-radius: 1.5em;
+}
+
+.card h1{
+    font-size: 2em;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+.pese-preview{
+margin-top: 0;
+padding-top: ;
+}
+
+.card-bottom p{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+    padding-top: 0.8em;
+    color: #7F9E84;
+    
+}
+
+.no-results{
+    margin-top: 5em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 2em;
+    color: #7F9E84;
+    /* visibility: hidden; */
+}
