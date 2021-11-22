@@ -1,16 +1,21 @@
 import React from "react";
-
+import {useNavigate} from "react-router-dom";
 function PeseCard(props){
     
     // const peseNum = props.pese.number;
     // const pese = props.pese.pese;
 
-    function hello(){
-        console.log(props.peseNum);
+    const navigate = useNavigate();
+
+    function toPesePage(){
+        navigate("/pese-" + props.peseNum, {state:{
+                                                    peseNum: props.peseNum,
+                                                    pese: props.pese
+        }})
     }
 
     return (
-              <div className={"card"} onClick={hello}>
+              <div className={"card"} onClick={toPesePage}>
                 
                 <div className={"card-top"}>
                     <h1 className={"card-header"}>Pese {props.peseNum}</h1>

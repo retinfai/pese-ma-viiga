@@ -16,8 +16,8 @@ function SearchResults(){
 
     
     return (
-            <div className={"search-container"}>
-                <h1>Search Results:</h1>
+            <div className={"search-container-results"}>
+                <h1>Search Results: {query}</h1>
                 
                 <SearchArea 
                         btnLabel="Search"

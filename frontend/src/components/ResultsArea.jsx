@@ -2,7 +2,6 @@ import React from "react";
 import PeseCard from "./PeseCard";
 
 function ResultsArea(props){
-
     const results = props.results.results;
     console.log(results);
 

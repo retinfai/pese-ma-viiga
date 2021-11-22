@@ -35,21 +35,22 @@ h1 {
 }
 input {
     height: 2.5em;
-    width: 50em;
+    width: 50vw;
     border-radius: 3em;
     border: solid #bfd9c6;
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
     font-size: 1em;
     padding-left: 2em;   
+
 }
 
-.search-container{
+.search-container-results{
     position: fixed;
     left: 50%;
     margin-left: -25em;
     background-color: #FAF1E6;
-    padding-bottom: 1em;
+    height: 25vh;
 }
 
 .button {
@@ -82,8 +83,8 @@ input {
 }
 
 .results-area{
-    margin-top: 5em;
-    height: 36.5em;
+    margin-top:1vh;
+    height: 77vh;
     width: 50em;
     overflow: scroll;
     /* text-align: center; */
@@ -129,11 +130,10 @@ input {
 }
 
 .pese-preview{
-margin-top: 0;
-padding-top: ;
+    margin-top: 0;
 }
 
-.card-bottom p{
+p{
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
     font-size: 2em;
@@ -150,5 +150,14 @@ padding-top: ;
     font-weight: 300;
     font-size: 2em;
     color: #7F9E84;
-    /* visibility: hidden; */
+}
+
+.pese-page-header{
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.pese-display-area p{
+    padding-top: 0;
+    text-align: center;
 }

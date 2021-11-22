@@ -2,6 +2,8 @@ import React from "react";
 
 function SearchBar(props){
     
+
+
     return (
         <span className={props.styling}>
         
@@ -12,7 +14,6 @@ function SearchBar(props){
                 placeholder={props.placeholder} 
                 spellCheck="false"
                 value={props.barValue}
-                // onChange={onChange}
                 autoComplete="off"
                 />
                 
