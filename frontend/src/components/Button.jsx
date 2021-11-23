@@ -9,6 +9,7 @@ function Button(props){
                 onClick= {props.onClick} 
                 type={props.type} 
                 className={"button"}
+                id={props.id}
             >{props.label}</button>
         </span>
       

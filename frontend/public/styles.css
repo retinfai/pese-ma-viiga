@@ -161,3 +161,26 @@ p{
     padding-top: 0;
     text-align: center;
 }
+
+#clipboard{
+    /* position: absolute; */
+    left: 80vw;
+    border-radius: 0.5em;
+    width: 10em;
+    height: 3em;
+    margin-left: 0.3em;
+    background-color: transparent;
+    border: 2px solid #064420;
+    color: #064420;
+    font-size: 0.75em;
+    margin-top: 0;
+}
+
+#copy-message{
+    margin-top: 0.2em;
+    padding-top: 0;
+    font-size: 1em;
+    visibility: hidden;
+}
+
+#copy-message:

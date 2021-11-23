@@ -13,13 +13,11 @@ function PeseDisplay(props){
             {
                 props.pese.split(":").map(
                     (verse, index) => {
-                        console.log(verse)
-
                        return (  
                            <div key={index}>
                                 {
                                     verse.split(";").map( (line,indexLine) => {
-                                    console.log(line)
+                                    
                                     return (<p key={indexLine}>{line}</p>)
                                     })
 
@@ -31,7 +29,7 @@ function PeseDisplay(props){
                         )
                     })
             }
-            {/* <h1>hello</h1> */}
+            
         </div>
     )
 
