@@ -2,6 +2,8 @@ import React from "react";
 import {useLocation} from "react-router-dom"
 import PeseDisplay from "../PeseDisplay";
 import Button from "../Button";
+import { FullScreen, useFullScreenHandle } from "react-full-screen";
+
 function PesePage(props){
     const location = useLocation();
 
@@ -9,14 +11,16 @@ function PesePage(props){
     const peseObject = location.state;
     const peseClipboard = peseObject.pese.replace(new RegExp(";", 'g'),", \n").replace(new RegExp(":", 'g'), "\n\n");
 
-    // console.log(peseClipboard);
 
 
 
-    function onClick(){
+    function copyOnClick(){
         navigator.clipboard.writeText(peseClipboard);
         document.getElementById("copy-message").style.visibility = "visible";
     }
+
+    const handle = useFullScreenHandle();
+
 
     return (
         <div className={"center"}>
@@ -28,11 +32,12 @@ function PesePage(props){
                 <Button 
                     label="Copy to clipboard"
                     id="clipboard"
-                    onClick={onClick}
+                    onClick={copyOnClick}
                 />
                 <Button 
                     label="Present"
                     id="clipboard"
+                    onClick={handle.enter}
                 />
             </div>
             <div>
@@ -43,6 +48,11 @@ function PesePage(props){
                 pese={peseObject.pese}
             />
 
+            <FullScreen handle={handle}>
+                <PeseDisplay 
+                    pese={peseObject.pese}
+                />
+            </FullScreen>
             
         </div>
     )
