@@ -2,7 +2,7 @@ import React from "react";
 import PeseCard from "./PeseCard";
 
 function ResultsArea(props){
-    const results = props.results.results;
+    const results = props.results.results ? props.results.results : [];
     console.log(results);
 
     if (results.length === 0){
@@ -13,6 +13,7 @@ function ResultsArea(props){
         )
     }
 
+    
     return(
         <div className={"results-area"}>
 

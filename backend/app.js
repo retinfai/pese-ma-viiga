@@ -50,10 +50,6 @@ app.post("/search", function(req,res){
 });
 
 
-
-
-
-
 app.listen(2000,function(){
   console.log("\nServer Started on Port 2000");
 });

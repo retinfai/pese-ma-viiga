@@ -49,9 +49,12 @@ function PesePage(props){
             />
 
             <FullScreen handle={handle}>
+                <body>
                 <PeseDisplay 
                     pese={peseObject.pese}
                 />
+                </body>
+               
             </FullScreen>
             
         </div>
