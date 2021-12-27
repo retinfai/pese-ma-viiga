@@ -48,7 +48,7 @@ function SearchArea(props){
                     placeholder={props.barPlaceHolder}
                     styling={props.barStyling}
                     value={props.barValue}
-
+                    onClick={getSearchResults}
                 />
              
                 <Button 

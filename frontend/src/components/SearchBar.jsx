@@ -2,6 +2,11 @@ import React from "react";
 
 function SearchBar(props){
     
+    function onKeyPressed(e) {
+        if (e.key === "Enter") {
+          props.onClick();
+        }
+    }
 
 
     return (
@@ -15,6 +20,7 @@ function SearchBar(props){
                 spellCheck="false"
                 value={props.barValue}
                 autoComplete="off"
+                onKeyDown={onKeyPressed}
                 />
                 
         </span>
