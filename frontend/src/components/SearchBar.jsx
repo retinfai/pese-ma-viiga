@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from 'react';
 
 function SearchBar(props){
     
+    const [value, setValue] = useState("");
+
     function onKeyPressed(e) {
-        if (e.key === "Enter") {
-          props.onClick();
-        }
+        setValue(e.target.value);
+        props.onClick();
     }
 
 
@@ -18,9 +19,9 @@ function SearchBar(props){
                 type="text" 
                 placeholder={props.placeholder} 
                 spellCheck="false"
-                value={props.barValue}
                 autoComplete="off"
-                onKeyDown={onKeyPressed}
+                value={value}
+                onChange={onKeyPressed}
                 />
                 
         </span>

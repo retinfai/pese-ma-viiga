@@ -29,8 +29,14 @@ const peseSchema = new mongoose.Schema({
 const peseModel = new mongoose.model("Pese", peseSchema);
 
 function getFromDB(searchQuery){
-  const results = peseModel.find({$text: {$search: `\"${searchQuery}\"`}}).sort({number: 1});
+
+  const results = (searchQuery === "") ? peseModel.find() : peseModel.find({$text: {$search: `\"${searchQuery}\"`}}).sort({number: 1});
+
   return results;
+}
+
+function search(query){
+
 }
 
 //--------------- MAIN FUNCTIONALITY

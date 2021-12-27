@@ -10,7 +10,7 @@ function PesePage(props){
     console.log("State Object: ",location.state);
     const peseObject = location.state;
     const peseClipboard = peseObject.pese.replace(new RegExp(";", 'g'),", \n").replace(new RegExp(":", 'g'), "\n\n");
-
+    
 
 
 
