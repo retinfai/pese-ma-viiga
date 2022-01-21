@@ -29,14 +29,6 @@ export default function NavBar() {
                     <a className={styles.links}>Login</a>
                 </Link>
             </li>
-
-            {/* <li className={styles.links}>
-                
-            </li>
-
-            <li className={styles.links}>
-                
-            </li> */}
         </ul>
 
     )

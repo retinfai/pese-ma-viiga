@@ -1,0 +1,18 @@
+.peseCard {
+    border: 2px solid black;
+    height: 13em;
+    width: 18em;
+    border-radius: 1rem;
+    padding: 1em;
+    font-size: large;
+    overflow: hidden;
+}
+
+.peseCard h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.peseCard:hover{
+    cursor: pointer;
+}
