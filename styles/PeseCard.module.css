@@ -8,7 +8,7 @@
     overflow: hidden;
 }
 
-.peseCard h3 {
+.peseCard h3, .peseCard p {
     margin: 0;
     padding: 0;
 }
@@ -16,3 +16,11 @@
 .peseCard:hover{
     cursor: pointer;
 }
+
+.pesePreview {
+    font-size: larger;
+}
+
+/* .peseCard hr {
+    
+} */
