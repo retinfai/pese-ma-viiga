@@ -50,3 +50,11 @@
     color: #D4D2D2;
     font-weight: 100;
 }
+
+.title:hover {
+    cursor: pointer;
+}
+
+.links:hover {
+    cursor: pointer;
+}

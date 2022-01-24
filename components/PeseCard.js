@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function PeseCard({ peseNum, pese }) {
 
     return (
-        <Link href={"pese-" + peseNum}>
+        <Link href={"/efks/pese-" + peseNum}>
             <div className={styles.peseCard}>
                 <h3>Pese {peseNum}</h3>
                 <hr></hr>

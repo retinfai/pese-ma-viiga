@@ -1,0 +1,17 @@
+
+.peseDisplay{
+    text-align: center;
+    font-size: xx-large;
+    background-color: white;
+}
+
+.backToMainBtn {
+    display: absolute;
+    padding: 1em 5em;
+
+}
+
+.backToMainBtn:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
