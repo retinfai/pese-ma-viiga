@@ -4,25 +4,21 @@ import styles from '../styles/Home.module.css'
 import NavBar from '../components/NavBar'
 import PeseCard from '../components/PeseCard'
 import { useState, useEffect } from 'react'
-import useSessionStorage from '../hooks/useSessionStorage'
 import fs from 'fs'
-import { setCookies, getCookie } from 'cookies-next'
 
 export default function Home({ peses }) {
 
-  var defaultQuery = "";
   
-  const [query, setQuery] = useState(defaultQuery)
+  const [query, setQuery] = useState("")
   const [results, setResults] = useState(peses)
 
-  useEffect(() => {
-    defaultQuery = sessionStorage.getItem("query") ? sessionStorage.getItem("query") : ""
+  useEffect(() => { // Executed on mount (once)
+    const defaultQuery = sessionStorage.getItem("query") ? sessionStorage.getItem("query") : ""
     setQuery(defaultQuery)
-  },[defaultQuery])
+  },[])
 
   useEffect(() => {
       sessionStorage.setItem("query", query)
-      // setCookies("query", query)
       const searchResults = peses.filter(peseObj => peseObj.pese.toLowerCase().includes(query.trim().toLowerCase()))
       setResults(searchResults)
   },[query, peses])

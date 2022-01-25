@@ -1,6 +1,5 @@
 import styles from "../styles/NavBar.module.css"
 import Link from "next/link"
-import { removeCookies } from "cookies-next"
 
 export default function NavBar({ setQuery, query }) {
 
@@ -10,7 +9,6 @@ export default function NavBar({ setQuery, query }) {
     }
 
     function handleTitleClick(){
-        sessionStorage.getItem("query")
         setQuery("")
     }
 
