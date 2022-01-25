@@ -28,7 +28,7 @@
 
 }
 
-.searchBar {
+#searchBar {
     width: 40vw;
     height: 2rem;
     margin-top: 5px;

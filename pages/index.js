@@ -3,9 +3,27 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import NavBar from '../components/NavBar'
 import PeseCard from '../components/PeseCard'
+import { useEffect } from 'react'
+import { useState } from 'react'
+
 import fs from 'fs'
+import { set } from 'mongoose'
 
 export default function Home({ peses }) {
+
+  const [query, setQuery] = useState("")
+  const [results, setResults] = useState(peses)
+
+  useEffect(() => {
+    const delay = setTimeout( () => {
+      console.log("Search Complete: " + query);
+      const searchResults = peses.filter(peseObj => peseObj.pese.toLowerCase().includes(query.trim().toLowerCase()))
+      setResults(searchResults)
+    }, 750)
+
+    return () => clearTimeout(delay)
+    
+  },[query, peses])
 
   return (
     <div className={styles.container}>
@@ -18,13 +36,15 @@ export default function Home({ peses }) {
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"></link>
       </Head>
 
-      <NavBar />
+      <NavBar
+        setQuery={setQuery}
+      />
 
       <div className={styles.peseCardArea}>
         {
-          peses.map(pese => {
-            
-            const formattedPese = pese.pese.replaceAll("*",", ").replaceAll("&", " ")
+          results.map(pese => {
+
+            const formattedPese = pese.pese.replaceAll("*", ", ").replaceAll("&", " ")
             return (
               <PeseCard
                 key={"pese-" + pese.number}
@@ -42,6 +62,7 @@ export default function Home({ peses }) {
       </footer>
     </div>
   )
+
 }
 
 export async function getStaticProps(context) {
@@ -50,7 +71,7 @@ export async function getStaticProps(context) {
 
   const pesesString = data.split("\n");
 
- 
+
   const peses = pesesString.map(rawPese => {
     return JSON.parse(rawPese)
   })

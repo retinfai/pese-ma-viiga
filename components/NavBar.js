@@ -1,7 +1,12 @@
 import styles from "../styles/NavBar.module.css"
 import Link from "next/link"
 
-export default function NavBar() {
+export default function NavBar({ setQuery }) {
+
+    function handleChange(event) {
+        const query = event.currentTarget.value
+        setQuery(query)
+    }
 
     return (
 
@@ -13,7 +18,13 @@ export default function NavBar() {
             </li>
 
             <li>
-                <input className={styles.searchBar} type="text" placeholder="Search for a Pese" />
+                <input
+                    id={styles.searchBar}
+                    type="text"
+                    placeholder="Search for a Pese"
+                    onChange={handleChange}
+                    autoComplete="off" 
+                    />
             </li>
 
             <li className={styles.linksContainer}>
