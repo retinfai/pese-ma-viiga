@@ -1,18 +1,24 @@
 import styles from "../styles/NavBar.module.css"
 import Link from "next/link"
+import { removeCookies } from "cookies-next"
 
-export default function NavBar({ setQuery }) {
+export default function NavBar({ setQuery, query }) {
 
-    function handleChange(event) {
+    function handleInputChange(event) {
         const query = event.currentTarget.value
         setQuery(query)
     }
 
+    function handleTitleClick(){
+        removeCookies("query")
+        setQuery("")
+    }
+    
     return (
 
         <ul className={styles.container}>
             <li>
-                <h1 className={styles.title}>
+                <h1 className={styles.title} onClick={handleTitleClick}>
                     Pese ma Viiga
                 </h1>
             </li>
@@ -22,8 +28,10 @@ export default function NavBar({ setQuery }) {
                     id={styles.searchBar}
                     type="text"
                     placeholder="Search for a Pese"
-                    onChange={handleChange}
+                    onChange={handleInputChange}
                     autoComplete="off" 
+                    value={query}
+                    spellCheck="false"
                     />
             </li>
 

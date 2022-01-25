@@ -1,14 +1,19 @@
 import styles from "../styles/NavBar.module.css"
 import Link from "next/link"
-
+import { removeCookies } from "cookies-next";
 export default function PeseBar({ peseNum, firstLine, pese, fullScreen }) {
+
+    function handleClick(){
+        // Delete cookie
+        removeCookies("query")
+    }
 
     return (
 
         <ul className={styles.container}>
             <li>
                 <Link href={"/"}>
-                    <h1 className={styles.title}>
+                    <h1 className={styles.title} onClick={handleClick}>
                         Pese ma Viiga
                     </h1>
                 </Link>
