@@ -10,10 +10,10 @@ export default function NavBar({ setQuery, query }) {
     }
 
     function handleTitleClick(){
-        removeCookies("query")
+        sessionStorage.getItem("query")
         setQuery("")
     }
-    
+
     return (
 
         <ul className={styles.container}>
