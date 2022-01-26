@@ -15,7 +15,7 @@ export default function NavBar({ setQuery, query }) {
     return (
 
         <ul className={styles.container}>
-            <li>
+            <li className={styles.titleContainer}>
                 <h1 className={styles.title} onClick={handleTitleClick}>
                     Pese ma Viiga
                 </h1>

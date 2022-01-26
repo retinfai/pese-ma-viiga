@@ -3,15 +3,23 @@
     margin: 0;
     padding: 1em 1.75em;
     border-bottom: 2px solid #D4D2D2;
-    display: flex;
-    justify-content: space-around;
+    text-align: center;
+    height: 81px;
 }
 
 .container li {
     display: inline-block;
-    margin-left: 1rem;
     font-size: larger;
     color: black;
+}
+
+.titleContainer{
+    text-align: left;
+    float: left;
+}
+
+.title:hover {
+    cursor: pointer;
 }
 
 .pages {
@@ -25,7 +33,7 @@
 
 .linksContainer {
     margin-top: 15px;
-
+    float: right;
 }
 
 #searchBar {
@@ -44,6 +52,8 @@
     text-align: center;
     font-family: Roboto;
     font-weight: 100;
+
+    /* margin: 0 10vw; */
 }
 
 .searchBar::placeholder {
@@ -51,10 +61,13 @@
     font-weight: 100;
 }
 
-.title:hover {
-    cursor: pointer;
-}
+
 
 .links:hover {
     cursor: pointer;
+}
+
+.peseTitle {
+    width: 576px;
+    margin: 0 9rem;
 }

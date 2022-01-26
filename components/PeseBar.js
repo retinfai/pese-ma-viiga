@@ -7,7 +7,7 @@ export default function PeseBar({ peseNum, firstLine, pese, fullScreen }) {
     return (
 
         <ul className={styles.container}>
-            <li>
+            <li className={styles.titleContainer}>
                 <Link href={"/"}>
                     <h1 className={styles.title}>
                         Pese ma Viiga
@@ -17,7 +17,7 @@ export default function PeseBar({ peseNum, firstLine, pese, fullScreen }) {
             </li>
 
             <li>
-                <h1 >
+                <h1 className={styles.peseTitle}>
                     Pese {peseNum}: {firstLine}
                 </h1>
             </li>
