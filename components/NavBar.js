@@ -8,13 +8,18 @@ export default function NavBar({ setQuery, query }) {
         setQuery(query)
     }
 
-    function handleTitleClick(){
+    function handleTitleClick() {
         setQuery("")
     }
 
     return (
 
         <ul className={styles.container}>
+            <li className={styles.hamburgerMenuContainer}>
+                <img className={styles.hamburgerMenu}src="https://img.icons8.com/external-gradak-royyan-wijaya/48/000000/external-article-basic-interface-iii-gradak-royyan-wijaya-2.png" />
+            </li>
+
+            
             <li className={styles.titleContainer}>
                 <h1 className={styles.title} onClick={handleTitleClick}>
                     Pese ma Viiga
@@ -27,10 +32,10 @@ export default function NavBar({ setQuery, query }) {
                     type="text"
                     placeholder="Search for a Pese"
                     onChange={handleInputChange}
-                    autoComplete="off" 
+                    autoComplete="off"
                     value={query}
                     spellCheck="false"
-                    />
+                />
             </li>
 
             <li className={styles.linksContainer}>
@@ -46,8 +51,11 @@ export default function NavBar({ setQuery, query }) {
                     <a className={styles.links}>Login</a>
                 </Link>
             </li>
-        </ul>
 
+            <li className={styles.searchIconContainer}>
+                <img className={styles.searchIcon}src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-magnifying-glass-interface-kiranshastry-lineal-kiranshastry.png" />
+            </li>
+        </ul>
     )
 
 

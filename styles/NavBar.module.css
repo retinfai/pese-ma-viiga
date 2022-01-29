@@ -4,7 +4,7 @@
     padding: 1em 1.75em;
     border-bottom: 2px solid #D4D2D2;
     text-align: center;
-    height: 81px;
+    /* height: 81px; */
 }
 
 .container li {
@@ -14,8 +14,9 @@
 }
 
 .titleContainer{
-    text-align: left;
+    text-align: center;
     float: left;
+    width: fit-content;
 }
 
 .title:hover {
@@ -28,12 +29,14 @@
 
 .links {
     margin-top: 15px;
-    margin-left: 1em;
+    margin-right: 1em;
 }
 
 .linksContainer {
+    display: flex;
     margin-top: 15px;
     float: right;
+    justify-content: space-around;
 }
 
 #searchBar {
@@ -45,6 +48,7 @@
     border-style: solid;
     border: none;
     border-bottom: 2px #516773 solid;
+
     outline: none;
     
     font-size: larger;
@@ -61,13 +65,70 @@
     font-weight: 100;
 }
 
-
-
 .links:hover {
     cursor: pointer;
 }
 
-.peseTitle {
+.hamburgerMenu, .searchIcon{
+    display: none;
+}
+
+.backArrow{
+    display: none;
+    position: absolute;
+    margin: 1em;
+}
+
+.backArrowContainer{
+    float: left;
+}
+/* .peseTitle {
     width: 576px;
     margin: 0 9rem;
+} */
+
+.smallPeseTitle {
+    display: none;
+}
+
+@media screen and (max-width: 976px) { 
+    #searchBar, .links, .peseTitle{
+      display: none;
+    }
+    
+    .smallPeseTitle {
+        display: inline;
+    }
+
+    .titleContainer{
+        float: none;
+    }
+
+    .hamburgerMenu, .searchIcon, .backArrow{
+        display: inline-block;
+    }
+
+    .hamburgerMenuContainer{
+        float: left;
+    }
+
+    .searchIconContainer{
+        float: right;
+    }
+
+    .titleContainer{
+        display: block;
+    }
+    
+  }
+
+  @media screen and (max-width: 656px) { 
+    
+    .container {
+        padding: 1rem 0.2rem;
+    }
+    
+    .hamburgerMenu{
+        margin-left: 1rem;
+    }
 }
