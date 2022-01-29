@@ -8,7 +8,10 @@ export default function PeseBar({ peseNum, firstLine, pese, fullScreen }) {
 
         <ul className={styles.container}>
             <li className={styles.backArrowContainer}>
-                <img className={styles.backArrow} src="https://img.icons8.com/external-kmg-design-basic-outline-kmg-design/32/000000/external-left-arrows-kmg-design-basic-outline-kmg-design-1.png" />
+                <Link href={"/"}>
+                    <img className={styles.backArrow} src="https://img.icons8.com/external-kmg-design-basic-outline-kmg-design/32/000000/external-left-arrows-kmg-design-basic-outline-kmg-design-1.png" />
+                </Link>
+
             </li>
 
             <li className={styles.titleContainer}>
