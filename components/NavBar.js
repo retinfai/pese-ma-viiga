@@ -1,5 +1,6 @@
 import styles from "../styles/NavBar.module.css"
 import Link from "next/link"
+import { useEffect } from "react"
 
 export default function NavBar({ setQuery, query }) {
 
@@ -12,14 +13,15 @@ export default function NavBar({ setQuery, query }) {
         setQuery("")
     }
 
+
     return (
 
         <ul className={styles.container}>
             <li className={styles.hamburgerMenuContainer}>
-                <img className={styles.hamburgerMenu}src="https://img.icons8.com/external-gradak-royyan-wijaya/48/000000/external-article-basic-interface-iii-gradak-royyan-wijaya-2.png" />
+                <img className={styles.hamburgerMenu} src="https://img.icons8.com/external-gradak-royyan-wijaya/48/000000/external-article-basic-interface-iii-gradak-royyan-wijaya-2.png" />
             </li>
 
-            
+
             <li className={styles.titleContainer}>
                 <h1 className={styles.title} onClick={handleTitleClick}>
                     Pese ma Viiga
@@ -53,7 +55,8 @@ export default function NavBar({ setQuery, query }) {
             </li>
 
             <li className={styles.searchIconContainer}>
-                <img className={styles.searchIcon}src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-magnifying-glass-interface-kiranshastry-lineal-kiranshastry.png" />
+                <img className={styles.searchIcon} src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-magnifying-glass-interface-kiranshastry-lineal-kiranshastry.png" />
+
             </li>
         </ul>
     )

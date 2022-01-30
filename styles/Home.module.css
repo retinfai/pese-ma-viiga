@@ -1,10 +1,11 @@
 
 .peseCardArea {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(20em,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(22em,5fr));
   justify-items: center;
   padding-top: 3em;
   row-gap: 2em;
+  column-gap: minmax(1em,1em);
   margin-bottom: 2em;
   width: 100vw;
 

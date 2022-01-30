@@ -19,6 +19,7 @@
     width: fit-content;
 }
 
+
 .title:hover {
     cursor: pointer;
 }
@@ -36,7 +37,6 @@
     display: flex;
     margin-top: 15px;
     float: right;
-    justify-content: space-around;
 }
 
 #searchBar {
@@ -90,8 +90,16 @@
 .smallPeseTitle {
     display: none;
 }
-
-@media screen and (max-width: 976px) { 
+#copyBtnContainer{
+    width: 154px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 1em;
+}
+#copyBtn{
+    margin: 0;
+}
+@media screen and (max-width: 1052px) { 
     #searchBar, .links, .peseTitle{
       display: none;
     }

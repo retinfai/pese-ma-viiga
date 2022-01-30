@@ -34,8 +34,10 @@ export default function PeseBar({ peseNum, firstLine, pese, fullScreen }) {
             </li>
 
             <li className={styles.linksContainer}>
+                <div id={styles.copyBtnContainer}>
+                    <a id={styles.copyBtn} className={styles.links} onClick={copyToClipboard}>Copy to Clipboard</a>
 
-                <a className={styles.links} onClick={copyToClipboard}>Copy to Clipboard</a>
+                </div>
 
                 <a className={styles.links} onClick={fullScreen.enter}>Present</a>
 
@@ -44,9 +46,13 @@ export default function PeseBar({ peseNum, firstLine, pese, fullScreen }) {
 
     )
 
-    function copyToClipboard() {
+    function copyToClipboard(event) {
         const formattedPese2 = pese.replaceAll("*", "\n").replaceAll("&", "\n\n");
         navigator.clipboard.writeText(formattedPese2)
+        // document.getElementById("copyBtn").innerHTML("Copied")
+
+        event.target.innerHTML = "Copied!"
+
     }
 
 
