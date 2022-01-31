@@ -47,11 +47,11 @@ export default function PeseBar({ peseNum, firstLine, pese, fullScreen }) {
     )
 
     function copyToClipboard(event) {
-        const formattedPese2 = pese.replaceAll("*", "\n").replaceAll("&", "\n\n");
-        navigator.clipboard.writeText(formattedPese2)
-        // document.getElementById("copyBtn").innerHTML("Copied")
+        const formattedPese = pese.replaceAll("*", "\n").replaceAll("&", "\n\n");
+        navigator.clipboard.writeText(formattedPese)
 
         event.target.innerHTML = "Copied!"
+        event.target.style.color = "#acb1bd"
 
     }
 

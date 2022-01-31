@@ -2,9 +2,9 @@
     list-style-type: none;
     margin: 0;
     padding: 1em 1.75em;
+
     border-bottom: 2px solid #D4D2D2;
     text-align: center;
-    /* height: 81px; */
 }
 
 .container li {
@@ -82,11 +82,6 @@
 .backArrowContainer{
     float: left;
 }
-/* .peseTitle {
-    width: 576px;
-    margin: 0 9rem;
-} */
-
 .smallPeseTitle {
     display: none;
 }
@@ -100,8 +95,14 @@
     margin: 0;
 }
 @media screen and (max-width: 1052px) { 
-    #searchBar, .links, .peseTitle{
+    #searchBar, .links, .peseTitle, #copyBtnContainer{
       display: none;
+    }
+    #searchBar{
+        width: 60vw;
+    }
+    .searchIconContainer{
+        text-align: center;
     }
     
     .smallPeseTitle {

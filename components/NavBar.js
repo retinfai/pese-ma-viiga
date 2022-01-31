@@ -13,22 +13,51 @@ export default function NavBar({ setQuery, query }) {
         setQuery("")
     }
 
+    function handleHamburgerMenu() {
+
+    }
+
+    function handleSearchIcon() {
+        if (window.innerWidth <= 1052) {
+            const searchBar = document.getElementById(styles.searchBar)
+            searchBar.style.display = 'inline'
+            searchBar.focus()
+        }
+    }
+
+    // useEffect(() => {
+    //     const searchBar = document.getElementById(styles.searchBar)
+    //     searchBar.addEventListener('focus', () => {
+    //         if (window.innerWidth <= 1052){
+    //             console.log(document.getElementsByClassName(styles.mobileElmt))
+    //             const mobileElmts = document.getElementsByClassName(styles.mobileElmt)
+
+    //             for(let elmt of mobileElmts ){
+    //                 elmt.style.display ='none'
+    //             }
+    //         }
+    //     })
+    // },[])
 
     return (
 
         <ul className={styles.container}>
             <li className={styles.hamburgerMenuContainer}>
-                <img className={styles.hamburgerMenu} src="https://img.icons8.com/external-gradak-royyan-wijaya/48/000000/external-article-basic-interface-iii-gradak-royyan-wijaya-2.png" />
+                <img onClick={handleHamburgerMenu} className={styles.hamburgerMenu + " " + styles.mobileElmt} src="https://img.icons8.com/external-gradak-royyan-wijaya/48/000000/external-article-basic-interface-iii-gradak-royyan-wijaya-2.png" />
             </li>
 
 
             <li className={styles.titleContainer}>
-                <h1 className={styles.title} onClick={handleTitleClick}>
+                <h1 className={styles.mobileElmt} id={styles.title}  onClick={handleTitleClick}>
                     Pese ma Viiga
                 </h1>
             </li>
 
-            <li>
+            <li className={styles.searchIconContainer}>
+                    <img onClick={handleSearchIcon} className={styles.searchIcon + " " + styles.mobileElmt} src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-magnifying-glass-interface-kiranshastry-lineal-kiranshastry.png" />
+            </li>
+
+            <li className={styles.searchBarContainer}>
                 <input
                     id={styles.searchBar}
                     type="text"
@@ -54,10 +83,7 @@ export default function NavBar({ setQuery, query }) {
                 </Link>
             </li>
 
-            <li className={styles.searchIconContainer}>
-                <img className={styles.searchIcon} src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-magnifying-glass-interface-kiranshastry-lineal-kiranshastry.png" />
-
-            </li>
+            
         </ul>
     )
 
