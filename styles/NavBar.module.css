@@ -14,13 +14,12 @@
 }
 
 .titleContainer{
-    text-align: center;
     float: left;
-    width: fit-content;
+    width: 250px;
 }
 
 
-.title:hover {
+.titleContainer:hover {
     cursor: pointer;
 }
 
