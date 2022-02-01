@@ -93,6 +93,18 @@
 #copyBtn{
     margin: 0;
 }
+
+#dropDown li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0.5rem 2rem;
+}
+#dropDown {
+    text-align: center;
+    padding: 0;
+    display: none;
+}
+
 @media screen and (max-width: 1052px) { 
     #searchBar, .links, .peseTitle, #copyBtnContainer{
       display: none;
