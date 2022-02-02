@@ -31,20 +31,6 @@ export default function NavBar({ setQuery, query }) {
         }
     }
 
-    // useEffect(() => {
-    //     const searchBar = document.getElementById(styles.searchBar)
-    //     searchBar.addEventListener('focus', () => {
-    //         if (window.innerWidth <= 1052){
-    //             console.log(document.getElementsByClassName(styles.mobileElmt))
-    //             const mobileElmts = document.getElementsByClassName(styles.mobileElmt)
-
-    //             for(let elmt of mobileElmts ){
-    //                 elmt.style.display ='none'
-    //             }
-    //         }
-    //     })
-    // },[])
-
     return (
         <div>
             <ul className={styles.container}>
@@ -80,13 +66,13 @@ export default function NavBar({ setQuery, query }) {
                         <a className={styles.links}>About</a>
                     </Link>
 
-                    <Link href={"/new-service"}>
+                    {/* <Link href={"/new-service"}>
                         <a className={styles.links}>New Service</a>
                     </Link>
 
                     <Link href={"/login"}>
                         <a className={styles.links}>Login</a>
-                    </Link>
+                    </Link> */}
                 </li>
 
 

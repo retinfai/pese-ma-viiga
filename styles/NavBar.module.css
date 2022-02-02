@@ -16,6 +16,8 @@
 .titleContainer{
     float: left;
     width: 250px;
+    position: absolute;
+    left: 1em;
 }
 
 
@@ -36,6 +38,8 @@
     display: flex;
     margin-top: 15px;
     float: right;
+    position: absolute;
+    right: 1em;
 }
 
 #searchBar {
@@ -122,6 +126,7 @@
 
     .titleContainer{
         float: none;
+        position: static;
     }
 
     .hamburgerMenu, .searchIcon, .backArrow{
