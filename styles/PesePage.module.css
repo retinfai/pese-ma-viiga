@@ -1,17 +1,35 @@
 
-.peseDisplay{
+#peseDisplay{
     text-align: center;
-    font-size: xx-large;
+    /* font-size: xx-large; */
     background-color: white;
+    padding-top: 1em;
+    
 }
 
 .backToMainBtn {
     display: absolute;
     padding: 1em 5em;
-
 }
 
 .backToMainBtn:hover{
     text-decoration: underline;
     cursor: pointer;
+}
+
+#verseNum {
+    font-size: x-large;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.verseLines{
+    margin-top: 0;
+    font-size: 2em;
+}
+
+.fullscreen{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
 }
