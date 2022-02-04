@@ -20,8 +20,13 @@ export default function PesePage(props) {
         numLines += verse.split("*").length
         verse.split("*").forEach(line => numChars += line.length)
     })
-    console.log(numLines)
-    console.log(numChars)
+    const avgLine = Math.ceil(numChars / numLines)
+    const numLinesInVerse = Math.ceil(numLines / numVerses)
+
+    console.log("Number of Verses: " + numVerses)
+    console.log("Number of lines per Verse: " + numLinesInVerse)
+    console.log("Average Chars in Line: " + avgLine)
+
 
     const handle = useFullScreenHandle();
 
@@ -29,23 +34,49 @@ export default function PesePage(props) {
 
         document.addEventListener("fullscreenchange", (event) => {
             const peseDisplay = document.getElementById(styles.peseDisplay)
+            const lines = document.getElementsByClassName(styles.verseLines)
+
+           if (numLinesInVerse <= 4 && numVerses <= 5 && avgLine <= 23){
+                peseDisplay.style.fontSize = "3em"
+                for (let a = 0; a < lines.length; a++){
+                    lines[a].style.margin = "0.5em"
+                }
+            } else if (numLinesInVerse <= 4 && numVerses > 5 || numLinesInVerse <= 4 && numVerses <= 5 && avgLine > 23) {
+                peseDisplay.style.fontSize = "2.2em"
+                for (let a = 0; a < lines.length; a++){
+                    lines[a].style.margin = "0.5em"
+                }
+            } else if (numLinesInVerse <= 7){
+                peseDisplay.style.fontSize = "2.5em"
+                for (let a = 0; a < lines.length; a++){
+                    lines[a].style.margin = "0.15em"
+                }
+            } else {
+                peseDisplay.style.fontSize = "2em"
+                for (let a = 0; a < lines.length; a++){
+                    lines[a].style.margin = "0.2em"
+                }
+            }
+
+
 
             if (document.fullscreenElement || document.webkitCurrentFullScreenElement) {
                 peseDisplay.style.display = "grid"
                 peseDisplay.style.gridTemplateColumns = "repeat(" + Math.ceil(numVerses / 2).toString() + ",1fr"
                 peseDisplay.style.height = "100vh"
                 peseDisplay.style.width = "100vw"
+                peseDisplay.style.paddingTop = "0"
             } else {
                 peseDisplay.style.display = null;
                 peseDisplay.style.gridTemplateColumns = null
                 peseDisplay.style.height = null
                 peseDisplay.style.width = null
-
-                const lines = Array.prototype.slice.call(document.getElementsByClassName(styles.verseLines))
-
-                lines.forEach(line => {
-                    line.style.marginBottom = null
-                })
+                peseDisplay.style.fontSize = null
+                const lines = document.getElementsByClassName(styles.verseLines)
+                for (let a = 0; a < lines.length; a++){
+                    lines[a].style.margin = null
+                }
+        
 
             }
 
