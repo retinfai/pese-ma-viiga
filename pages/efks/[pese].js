@@ -11,8 +11,8 @@ export default function PesePage(props) {
     const peseNum = props.data.number
     const pese = props.data.pese
     const firstLine = pese.substring(0, pese.indexOf("*"))
-
     const verses = pese.split("&")
+    
     const numVerses = verses.length
     var numLines = 0
     var numChars = 0
@@ -23,9 +23,9 @@ export default function PesePage(props) {
     const avgLine = Math.ceil(numChars / numLines)
     const numLinesInVerse = Math.ceil(numLines / numVerses)
 
-    console.log("Number of Verses: " + numVerses)
-    console.log("Number of lines per Verse: " + numLinesInVerse)
-    console.log("Average Chars in Line: " + avgLine)
+    // console.log("Number of Verses: " + numVerses)
+    // console.log("Number of lines per Verse: " + numLinesInVerse)
+    // console.log("Average Chars in Line: " + avgLine)
 
 
     const handle = useFullScreenHandle();
@@ -37,22 +37,22 @@ export default function PesePage(props) {
             const lines = document.getElementsByClassName(styles.verseLines)
 
            if (numLinesInVerse <= 4 && numVerses <= 5 && avgLine <= 23){
-                peseDisplay.style.fontSize = "3em"
+                peseDisplay.style.fontSize = "5vh"
                 for (let a = 0; a < lines.length; a++){
                     lines[a].style.margin = "0.5em"
                 }
             } else if (numLinesInVerse <= 4 && numVerses > 5 || numLinesInVerse <= 4 && numVerses <= 5 && avgLine > 23) {
-                peseDisplay.style.fontSize = "2.2em"
+                peseDisplay.style.fontSize = "4vh"
                 for (let a = 0; a < lines.length; a++){
                     lines[a].style.margin = "0.5em"
                 }
             } else if (numLinesInVerse <= 7){
-                peseDisplay.style.fontSize = "2.5em"
+                peseDisplay.style.fontSize = "4.5vh"
                 for (let a = 0; a < lines.length; a++){
                     lines[a].style.margin = "0.15em"
                 }
             } else {
-                peseDisplay.style.fontSize = "2em"
+                peseDisplay.style.fontSize = "3.5vh"
                 for (let a = 0; a < lines.length; a++){
                     lines[a].style.margin = "0.2em"
                 }
