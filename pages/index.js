@@ -18,7 +18,10 @@ export default function Home({ peses }) {
 
   useEffect(() => {
     sessionStorage.setItem("query", query)
-    const searchResults = peses.filter(peseObj => peseObj.pese.toLowerCase().includes(query.trim().toLowerCase()))
+    // if (parseInt(query)){
+
+    // }
+    const searchResults = peses.filter(peseObj => peseObj.pese.toLowerCase().includes(query.trim().toLowerCase()) || peseObj.number.includes(query.trim()))
     setResults(searchResults)
   }, [query, peses])
 

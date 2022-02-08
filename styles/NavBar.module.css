@@ -157,3 +157,10 @@
         margin-left: 1rem;
     }
 }
+
+@media screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape){
+    .links{
+        display: none;
+      }
+      
+    }
