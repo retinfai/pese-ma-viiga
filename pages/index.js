@@ -69,7 +69,8 @@ export default function Home({ peses }) {
 
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
+
   const data = fs.readFileSync("./pesesFS/peses/allPeses",
     { encoding: 'utf8', flag: 'r' })
 
@@ -87,6 +88,6 @@ export async function getStaticProps(context) {
   // }
 
   return {
-    props: { peses }, // will be passed to the page component as props
+    props: { peses } // will be passed to the page component as props
   }
 }
