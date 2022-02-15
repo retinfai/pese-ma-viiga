@@ -23,9 +23,9 @@ export default function PesePage(props) {
     const avgLine = Math.ceil(numChars / numLines)
     const numLinesInVerse = Math.ceil(numLines / numVerses)
 
-    // console.log("Number of Verses: " + numVerses)
-    // console.log("Number of lines per Verse: " + numLinesInVerse)
-    // console.log("Average Chars in Line: " + avgLine)
+    console.log("Number of Verses: " + numVerses)
+    console.log("Number of lines per Verse: " + numLinesInVerse)
+    console.log("Average Chars in Line: " + avgLine)
 
 
     const handle = useFullScreenHandle();
@@ -36,7 +36,7 @@ export default function PesePage(props) {
             const peseDisplay = document.getElementById(styles.peseDisplay)
             const lines = document.getElementsByClassName(styles.verseLines)
 
-           if (numLinesInVerse <= 4 && numVerses <= 5 && avgLine <= 23){
+           if (numLinesInVerse <= 4 && numVerses <= 5 && avgLine <= 26){
                 peseDisplay.style.fontSize = "5vh"
                 for (let a = 0; a < lines.length; a++){
                     lines[a].style.margin = "0.5em"
