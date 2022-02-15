@@ -127,7 +127,7 @@ export default function PesePage(props) {
 
 export async function getServerSideProps(context) {
     const peseNum = context.query.pese.substring(5)
-    const rawData = fs.readFileSync("./pesesFS/peses/pese-" + peseNum + ".json",
+    const rawData = fs.readFileSync("/pesesFS/peses/pese-" + peseNum + ".json",
         { encoding: 'utf8', flag: 'r' })
     const data = JSON.parse(rawData)
 
