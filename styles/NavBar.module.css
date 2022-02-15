@@ -89,7 +89,7 @@
     display: none;
 }
 #copyBtnContainer{
-    width: 154px;
+    /* width: 154px; */
     display: inline-block;
     text-align: right;
     margin-right: 1em;
