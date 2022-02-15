@@ -46,7 +46,7 @@ export default function Home({ peses }) {
           {
             results.map(pese => {
 
-              const formattedPese = pese ? pese.pese.replaceAll("*", ", ").replaceAll("&", " ") : ""
+              const formattedPese = pese.pese.replace(/\*/g, ', ').replace(/\&/, ' ')
               return (
                 <PeseCard
                   key={"pese-" + pese.number}
