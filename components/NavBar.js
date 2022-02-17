@@ -43,6 +43,7 @@ export default function NavBar({ setQuery, query }) {
                     <h1 className={styles.mobileElmt} id={styles.title} onClick={handleTitleClick}>
                         Pese ma Viiga
                     </h1>
+                    {/* <img src="logo.png" className={styles.mobileElmt} id={styles.title} onClick={handleTitleClick}/> */}
                 </li>
 
                 <li className={styles.searchIconContainer}>
