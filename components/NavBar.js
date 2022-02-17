@@ -62,9 +62,9 @@ export default function NavBar({ setQuery, query }) {
                 </li>
 
                 <li className={styles.linksContainer}>
-                    {/* <Link href={"/about"}>
+                    <Link href={"/about"}>
                         <a className={styles.links}>About</a>
-                    </Link> */}
+                    </Link>
 
                     {/* <Link href={"/new-service"}>
                         <a className={styles.links}>New Service</a>
