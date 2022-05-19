@@ -32,6 +32,56 @@ export default function PesePage(props) {
 
     useEffect(() => {
 
+        document.addEventListener("webkitfullscreenchange", (event) => {
+            const peseDisplay = document.getElementById(styles.peseDisplay)
+            const lines = document.getElementsByClassName(styles.verseLines)
+
+            if (numLinesInVerse <= 4 && numVerses <= 6 && avgLine <= 26) {
+                peseDisplay.style.fontSize = "5vh"
+                for (let a = 0; a < lines.length; a++) {
+                    lines[a].style.margin = "0.5em"
+                }
+            } else if (numLinesInVerse <= 4 && numVerses > 5 || numLinesInVerse <= 4 && numVerses <= 5 && avgLine > 23) {
+                peseDisplay.style.fontSize = "4vh"
+                for (let a = 0; a < lines.length; a++) {
+                    lines[a].style.margin = "0.5em"
+                }
+            } else if (numLinesInVerse <= 7) {
+                peseDisplay.style.fontSize = "4.5vh"
+                for (let a = 0; a < lines.length; a++) {
+                    lines[a].style.margin = "0.15em"
+                }
+            } else {
+                peseDisplay.style.fontSize = "3.5vh"
+                for (let a = 0; a < lines.length; a++) {
+                    lines[a].style.margin = "0.2em"
+                }
+            }
+
+
+
+            if (document.fullscreenElement || document.webkitCurrentFullScreenElement) {
+                peseDisplay.style.display = "grid"
+                peseDisplay.style.gridTemplateColumns = "repeat(" + Math.ceil(numVerses / 2).toString() + ",1fr"
+                peseDisplay.style.height = "100vh"
+                peseDisplay.style.width = "100vw"
+                peseDisplay.style.paddingTop = "0"
+            } else {
+                peseDisplay.style.display = null;
+                peseDisplay.style.gridTemplateColumns = null
+                peseDisplay.style.height = null
+                peseDisplay.style.width = null
+                peseDisplay.style.fontSize = null
+                const lines = document.getElementsByClassName(styles.verseLines)
+                for (let a = 0; a < lines.length; a++) {
+                    lines[a].style.margin = null
+                }
+
+
+            }
+
+        })
+
         document.addEventListener("fullscreenchange", (event) => {
             const peseDisplay = document.getElementById(styles.peseDisplay)
             const lines = document.getElementsByClassName(styles.verseLines)
